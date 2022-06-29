@@ -3,7 +3,9 @@
   --secondary-bg: #f5f4fa;
   --accent: #2196f3;
   --main-text: #757575;
-  --title-text: #212121;
+  --black-title: #212121;
+  --white-title: #ffffff;
+  --header-logo-clr: #000000;
 }
 
 /* *********  Global reset **************** */
@@ -58,24 +60,20 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header-nav,
-.header-nav-main {
+.header-nav {
   display: flex;
   align-items: center;
 }
 
+.logo--black {
+  color: var(--header-logo-clr);
+}
+
 .logo {
-  color: #000000;
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
-}
-
-.logo span {
-  color: var(--accent);
-}
-.current {
   color: var(--accent);
 }
 
@@ -87,16 +85,24 @@ body {
   letter-spacing: 0.02em;
   margin-left: 93px;
 }
-.header-nav-link {
+.nav-list__item {
+  margin-left: 50px;
+}
+
+.nav-list__link {
   position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: inherit;
+  color: var(--title-text);
 }
 
-.header-nav-link.current::after {
+.current {
+  color: var(--accent);
+}
+.current::after {
   position: absolute;
   content: "";
   display: block;
@@ -107,24 +113,6 @@ body {
   background-color: var(--accent);
 }
 
-.nav-list .item + .item {
-  margin-left: 50px;
-}
-
-.nav-list a {
-  text-decoration: inherit;
-  color: var(--title-text);
-}
-.nav-list .current {
-  color: var(--accent);
-}
-
-.nav-list a:hover,
-.contact-list a:hover,
-.nav-list a:focus,
-.contact-list a:focus {
-  color: var(--accent);
-}
 .contact-list {
   display: flex;
   margin-left: auto;
@@ -132,12 +120,10 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.contact-list {
   gap: 30px;
 }
 
-.contact-link {
+.contact-list__link {
   display: inline-flex;
   padding: 32px 0px 32px;
   align-items: center;
@@ -146,27 +132,27 @@ body {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  color: inherit;
+  text-decoration: inherit;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-icon {
+.contact-list__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contact-list a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.nav-list .item {
-  display: block;
+.nav-list__link:hover,
+.contact-list__link:hover,
+.nav-list__link:focus,
+.contact-list__link:focus {
+  color: var(--accent);
 }
 
 /************************* MAIN ***************************/
 
-.section.hero {
+.hero {
   max-width: 1600px;
   min-height: 600px;
   padding-top: 200px;
@@ -184,12 +170,9 @@ body {
   background-size: cover;
 }
 
-.hero {
-  text-align: center;
-}
-.hero h1 {
+.hero-title {
   width: 696px;
-  color: #ffffff;
+  color: var(--white-title);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -203,16 +186,18 @@ body {
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
-  color: #ffffff;
+  color: var(--white-title);
 }
 .hero-button {
+  display: block;
   background-color: var(--accent);
-  color: #ffffff;
+  color: var(--white-title);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  margin: 0 auto;
   cursor: pointer;
   padding: 10px 32px;
   border: 1px solid transparent;
