@@ -81,7 +81,7 @@ body {
 
 .logo {
   text-decoration: none;
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.2;
   color: var(--accent);
