@@ -2,17 +2,14 @@
     margin-bottom: 50px;
     color: $black-title;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 1.18;
-    // font-size: 36px;
-    // line-height: 1.17;
+    font-size: 36px;
+    line-height: 1.17;
     text-align: center;
 }
 
 .clients__list {
     display: flex;
     list-style: none;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0;
@@ -20,13 +17,13 @@
 }
 
 .clients__item {
-   width: calc((100% - 30px) / 2);
+    width: 170px;
     height: 92px;
 
-&:not(:nth-child(n+5)) {
-    margin-bottom: 30px;
-}
 
+&:not(:last-child) {
+    margin-right: 30px;
+}
 &:hover,
 &:focus {
     color: $accent;
@@ -37,7 +34,7 @@
 
 
 .clients__link {
-    width: 100%;
+    width: 170px;
     height: 92px;
     display: block;
     border: 1px solid #afb1b8;

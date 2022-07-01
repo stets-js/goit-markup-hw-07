@@ -1,15 +1,11 @@
 .address-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-left: 0;
-    line-height: 1.7;
+    line-height: 1.71;
     margin-top: 20px;
 
 
 &__item:not(:first-child) {
-    // margin-top: 9px;
-    margin-top: 8px;
+    margin-top: 9px;
 }
 
 
